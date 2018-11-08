@@ -363,7 +363,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
       this._getCommands().postMessage,
-      [typeof data === "object" ? JSON.stringify(data) : String(data)]
+      ['DIS IS WORKING']
     );
   };
 
