@@ -314,7 +314,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
         "}"
 
         "window.postMessage = function(data) {"
-          "messageQueue.push(String(data));"
+          "messageQueue.push(typeof data === 'object' ? JSON.stringify(data) : String(data));"
           "processQueue();"
         "};"
 
