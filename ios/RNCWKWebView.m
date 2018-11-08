@@ -413,7 +413,7 @@ static NSString *const MessageHanderName = @"ReactNative";
         "window.originalPostMessage = window.postMessage;"
 
         "window.postMessage = function(data) {"
-          "window.webkit.messageHandlers.%@.postMessage(String(data));"
+          "window.webkit.messageHandlers.%@.postMessage(typeof data === 'object' ? JSON.stringify(data) : String(data));"
         "};"
       "})();",
       MessageHanderName
